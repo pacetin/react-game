@@ -1,0 +1,32 @@
+.score-container {
+  width: 100%;    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-container h2 {
+  flex: 0 1 100%;
+  color: #448AFF;
+  text-align: center;
+  margin: 0rem 0rem 1rem;
+}
+
+.score-table {
+  flex: 0 1 50%;
+  font-weight: 400;  
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 1rem;
+}
+
+.score-table tr:first-child {
+  color: rgb(151, 1, 1);  
+  font-weight: 700;
+}
+
+.score-table th {
+  text-align: center;
+  padding: 7px;
+}
