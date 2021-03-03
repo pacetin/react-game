@@ -5,18 +5,18 @@ export const Navbar: React.FC = () => {
   return (
     <nav>
       <div className="nav-wrapper blue accent-2 px1">
-        <a href="/" className="brand-logo left">
+        <a href={process.env.PUBLIC_URL + '/'} className="brand-logo left">
           MEMORY
         </a>
         <ul className="right">
           <li>
-            <NavLink to="/">Settings</NavLink>
+            <NavLink to={process.env.PUBLIC_URL + '/'}>Settings</NavLink>
           </li>
           <li>
-            <NavLink to="/rules">Rules</NavLink>
+            <NavLink to={process.env.PUBLIC_URL + '/rules'}>Rules</NavLink>
           </li>
           <li>
-            <NavLink to="/highscore">Highscore</NavLink>
+            <NavLink to={process.env.PUBLIC_URL + '/highscore'}>Highscore</NavLink>
           </li>
         </ul>
       </div>

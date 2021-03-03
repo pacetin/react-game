@@ -35,17 +35,17 @@ export const GamePage: React.FC<IFieldProps> = (props) => {
     function keyDownHandler(e: KeyboardEvent): void {    
       if ((e.key === 'Z' || e.key === 'z') && e.ctrlKey) {
         e.preventDefault();
-        history.push('/');
+        history.push(process.env.PUBLIC_URL + '/');
       }
 
       if ((e.key === 'C' || e.key === 'c') && e.ctrlKey) {
         e.preventDefault();
-        history.push('/highscore');
+        history.push(process.env.PUBLIC_URL + '/highscore');
       }
 
       if ((e.key === 'V' || e.key === 'v') && e.ctrlKey) {
         e.preventDefault();
-        history.push('/rules');        
+        history.push(process.env.PUBLIC_URL + '/rules');        
       }
     }
 
@@ -69,7 +69,7 @@ export const GamePage: React.FC<IFieldProps> = (props) => {
   const clickHandler = (trials: number) => {
     closeWinModal();  
     props.saveScore!(Number(props.size), trials);  
-    history.push('/');
+    history.push(process.env.PUBLIC_URL + '/');
   }
 
   const showWinModal = (): void => { 

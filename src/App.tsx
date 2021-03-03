@@ -77,10 +77,10 @@ function App() {
       <Navbar />      
       <main>
         <Switch>       
-          <Route path="/"  component={() => <SettingsPage addSettings={addSettings} />} exact />
+          <Route path={process.env.PUBLIC_URL + '/'} component={() => <SettingsPage addSettings={addSettings} />} exact />
           <Route component={RulesPage} path="/rules" exact />          
-          <Route path="/game" exact component={() => <GamePage {...settings} saveScore={saveScore} />} />          
-          <Route  path="/highscore" component={() => <HighScorePage score={score} /> } exact />
+          <Route path={process.env.PUBLIC_URL + '/game'} exact component={() => <GamePage {...settings} saveScore={saveScore} />} />          
+          <Route  path={process.env.PUBLIC_URL + '/highscore'} component={() => <HighScorePage score={score} /> } exact />
         </Switch>
       </main>       
       <Footer />      
