@@ -28,7 +28,7 @@ const Settings: React.FC<ISettingsProps> = ({ addSettings }) => {
   const clickHandler = (event: React.MouseEvent): void => {
     event.preventDefault();
     localStorage.removeItem('GameState');
-    history.push(process.env.PUBLIC_URL + '/game');
+    history.push('/game');
     const settingsObj: IFieldProps = {
       size: selectSizeValue,
       category: selectCategoryValue,

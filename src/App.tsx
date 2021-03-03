@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import { Navbar } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { RulesPage } from "./pages/RulesPage";
@@ -73,18 +73,18 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />      
       <main>
         <Switch>       
-          <Route path={process.env.PUBLIC_URL + '/'} component={() => <SettingsPage addSettings={addSettings} />} exact />
+          <Route path="/" component={() => <SettingsPage addSettings={addSettings} />} exact />
           <Route component={RulesPage} path="/rules" exact />          
-          <Route path={process.env.PUBLIC_URL + '/game'} exact component={() => <GamePage {...settings} saveScore={saveScore} />} />          
-          <Route  path={process.env.PUBLIC_URL + '/highscore'} component={() => <HighScorePage score={score} /> } exact />
+          <Route path="/game" exact component={() => <GamePage {...settings} saveScore={saveScore} />} />          
+          <Route  path="/highscore" component={() => <HighScorePage score={score} /> } exact />
         </Switch>
       </main>       
       <Footer />      
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
