@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.score-container h2 {
+.score-container h3 {
   flex: 0 1 100%;
   color: #448AFF;
   text-align: center;

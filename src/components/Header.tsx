@@ -5,10 +5,10 @@ export const Navbar: React.FC = () => {
   return (
     <nav>
       <div className="nav-wrapper blue accent-2 px1">
-        <a href="/" className="brand-logo center">
-          Memory Game
+        <a href="/" className="brand-logo left">
+          MEMORY
         </a>
-        <ul className="left hide-on-med-and-down">
+        <ul className="right">
           <li>
             <NavLink to="/">Settings</NavLink>
           </li>

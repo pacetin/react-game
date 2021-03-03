@@ -9,7 +9,7 @@ type HighScoreProps = {
 export const HighScorePage: React.FC<HighScoreProps> = ({ score }) => {
   return (
     <div className="score-container">
-      <h2>Highscore</h2>
+      <h3>Highscore</h3>
       <table className="score-table">
         <tbody>        
           <tr><th>Rank</th><th>Trials</th><th>Size</th></tr>

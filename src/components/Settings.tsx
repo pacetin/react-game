@@ -52,8 +52,9 @@ const Settings: React.FC<ISettingsProps> = ({ addSettings }) => {
     (event.target.id === 'sounds') ? setRangeSoundValue(event.target.value) : setRangeMusicValue(event.target.value);
   };
 
-  return (
+  return (    
     <div className="settings">
+      <h3>Settings</h3>
       <form>
         <label>Field size</label>
         <select className="browser-default" id='size' value={selectSizeValue} onChange={selectChangeHandler}>     

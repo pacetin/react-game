@@ -1,3 +1,33 @@
 .settings {
-  flex: 0 1 500px;
+  flex: 0 1 480px;
+}
+
+.settings h3 {
+  color: #448AFF;
+  text-align: center;
+  margin: 0rem 0rem 1rem;
+}
+
+.settings form {
+  padding: 10px 0px 15px;
+}
+
+.settings select, .settings p {
+  margin-bottom: 20px;
+}
+
+.settings label {
+  font-size: 1rem;  
+  color: #6d6d6d;    
+}
+
+.range-field i {
+  vertical-align: middle;
+  margin-right: 1rem;
+  color: #6d6d6d;
+}
+
+.settings button {
+  display: block;  
+  margin: 0 auto;    
 }

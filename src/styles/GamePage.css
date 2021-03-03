@@ -81,7 +81,7 @@
 }
 
 .statistic-container {
-  flex: 0 1 50%;
+  flex: 0 1 480px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

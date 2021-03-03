@@ -38,6 +38,21 @@ function App() {
     }));
   }, [settings]);
 
+  useEffect(() => {
+    function keyDownHandler(e: KeyboardEvent): void {
+      if ((e.key === 'Enter') && e.shiftKey) {
+        e.preventDefault();
+        document.documentElement.requestFullscreen();
+      }
+    }
+
+    document.addEventListener('keydown', keyDownHandler);
+
+    return () => {
+      document.removeEventListener('keydown', keyDownHandler)
+    }
+  });
+
   const addSettings = (obj: IFieldProps): void => {
     setSettings(obj);
   };

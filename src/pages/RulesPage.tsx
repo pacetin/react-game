@@ -17,6 +17,7 @@ export const RulesPage: React.FC = () => {
         <li><strong>Ctrl + C</strong> - go to Highscore from Game page</li>
         <li><strong>Ctrl + V</strong> - go to Rules from Game page</li>
         <li><strong>Ctrl + Enter</strong> - start new game</li>                
+        <li><strong>Shift + Enter</strong> - fullscreen mode</li>                
       </ul>
     </div>
   );

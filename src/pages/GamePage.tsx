@@ -36,19 +36,16 @@ export const GamePage: React.FC<IFieldProps> = (props) => {
       if ((e.key === 'Z' || e.key === 'z') && e.ctrlKey) {
         e.preventDefault();
         history.push('/');
-        console.log('go to settings');
       }
 
       if ((e.key === 'C' || e.key === 'c') && e.ctrlKey) {
         e.preventDefault();
         history.push('/highscore');
-        console.log('go to highScore');
       }
 
       if ((e.key === 'V' || e.key === 'v') && e.ctrlKey) {
         e.preventDefault();
-        history.push('/rules');
-        console.log('go to rules');
+        history.push('/rules');        
       }
     }
 

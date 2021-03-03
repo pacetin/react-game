@@ -27,7 +27,14 @@ const generateCards = (size:string, category:string):ICard[] => {
 };
 
 const Field: React.FC<IFieldProps> = (props) => {
-  const { size, category, isPreShow, isSounds, isMusic, changeStatistic, showWinModal } = props
+  const { size, category, isPreShow, isSounds, isMusic, changeStatistic, showWinModal } = props;
+  
+  const { statistic: initialStatistic } = JSON.parse(localStorage.getItem('GameState') || '{}');
+  if (initialStatistic) {
+    wins = initialStatistic.wins;
+    trials = initialStatistic.trials;
+  }
+
   const [cards, setCards] = useState<ICard[]>(() => { return props.cards || generateCards(size, category)});  
   const [firstCard, setFirstCard] = useState<ICard | null>(null);
   const [secondCard, setSecondCard] = useState<ICard | null>(null);  
