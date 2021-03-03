@@ -12,8 +12,7 @@ export const GamePage: React.FC<IFieldProps> = (props) => {
     statistic: initialStatistic,
     cards: initialCards,
     timer: initialTimer,    
-  } = JSON.parse(localStorage.getItem('GameState') || '{}');
-  console.log(initialStatistic, initialCards, initialTimer, );
+  } = JSON.parse(localStorage.getItem('GameState') || '{}');  
   
   const [statistic, setStatistic] = useState<IStatisticProps>(initialStatistic || {    
     wins: 0,

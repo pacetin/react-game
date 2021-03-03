@@ -52,6 +52,9 @@ const Field: React.FC<IFieldProps> = (props) => {
     let audio = new Audio();
     audio.src = `${soundPath}background.mp3`;
     audio.load();
+    audio.muted = true;
+    audio.play();
+    audio.muted = false;
     audio.play();
     audio.volume = Number(isMusic) / 100;
     audio.loop = true;

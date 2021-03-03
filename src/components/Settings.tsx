@@ -14,6 +14,7 @@ const Settings: React.FC<ISettingsProps> = ({ addSettings }) => {
   useEffect(() => {
     function keyDownHandler(e: KeyboardEvent): void {
       if ((e.key === 'Enter') && e.ctrlKey) {
+        e.preventDefault();
         buttonRef.current!.click();
       }
     }
