@@ -49,18 +49,22 @@ const Field: React.FC<IFieldProps> = (props) => {
   useEffect(() => {
     if (isMusic === '0') return;
 
-    let audio = new Audio();
+    const audio = new Audio();
     audio.src = `${soundPath}background.mp3`;
     audio.load();
-    audio.muted = true;
-    audio.play();
-    audio.muted = false;
-    audio.play();
     audio.volume = Number(isMusic) / 100;
-    audio.loop = true;
+    audio.loop = true;    
+    const playPromise = audio.play();    
 
     return () => {
-      audio.pause();
+      if (playPromise !== undefined) {
+        playPromise.then(_ => {
+          audio.pause();
+        })
+        .catch(error => {
+          console.log('audio was not playing');
+        }); 
+      }
     }
   }, [isMusic])
 
